@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "scope": "weahead",
+  "public": true,
+  "build": {
+    "env": {
+      "NOW_BUILDER_DEBUG": "1"
+    }
+  }
+}

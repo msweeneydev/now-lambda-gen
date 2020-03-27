@@ -1,0 +1,13 @@
+{
+  "name": "lambda-gen-test",
+  "version": "1.0.0",
+  "description": "Minimal reproduction for generating lambdas on ZEIT Now",
+  "main": "index.js",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "now-build": "node scripts/now-build.js"
+  },
+  "keywords": [],
+  "author": "Michael Zetterberg <michael@weahead.se>",
+  "license": "MIT"
+}
