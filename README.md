@@ -8,13 +8,22 @@ See each branch for differenst approaches/tests. All fail unfortunately :(
 
 Public build output for this test:
 
-https://zeit.co/weahead/now-lambda-gen/d76zu0wwr
+https://zeit.co/weahead/now-lambda-gen/qvj7kuv3n
 
-This branch test is the same as `master` except it has a dummy JS file in `/api` just to trigger `@now/node` to run `now-build`.
+This branch tests if adding `includeFiles` to `functions` in `now.json` includes any generated JS file as lambdas.
+
+Added:
+```json
+"functions": {
+  "api/**/*.js": {
+    "includeFiles": "api/**/*.js"
+  }
+}
+```
 
 Expected: `/api/test.js` to be built as a lambda and deployed
 
-Result: It does not build nor deploy `/api/test.js`, only `/api/dummy.js`
+Result: It does not build nor deploy `/api/test.js`.
 
 ## License
 
