@@ -8,15 +8,13 @@ See each branch for differenst approaches/tests. All fail unfortunately :(
 
 Public build output for this test:
 
-https://zeit.co/weahead/now-lambda-gen/5xujlhlxf
+https://zeit.co/weahead/now-lambda-gen/d76zu0wwr
 
-This branch tests if just outputing a JS file in `/api` gets picked up by ZEIT Now during build. It does NOT. `now-build` is only run if a JS file already exists in the repo on push/execution of `now`. My guess is that `@now/node` only gets included when JS files are auto detected in the uploaded files.
-
-This is the simplest reproduction that I expected would "just work".
+This branch test is the same as `master` except it has a dummy JS file in `/api` just to trigger `@now/node` to run `now-build`.
 
 Expected: `/api/test.js` to be built as a lambda and deployed
 
-Result: It does not build nor deploy `/api/test.js`.
+Result: It does not build nor deploy `/api/test.js`, only `/api/dummy.js`
 
 ## License
 
